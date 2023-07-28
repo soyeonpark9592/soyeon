@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+    <link rel="stylesheet" href="css/reset.css"> <!-- 항상 가장 최상위에 써야함 -->
+    <link rel="stylesheet" href="css/search.css">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+
+    <script>
+        $(function () {
+            $(".page1 .addrbox").click(function () {
+                $(".page1").css("display", "none");
+                $(".page2").css("display", "block");
+            })
+
+            $(".page2 header .back").click(function () {
+                $(".page1").css("display", "block");
+                $(".page2").css("display", "none");
+            })
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="page1">
+        <header>
+            <h2>주소 검색</h2>
+            <div><a href="mobile.html"><img src="img/addr_close.png" alt="address-search"></a></div>
+        </header>
+
+
+        <section class="searchbar">
+            <div><img src="img/address_search.png" alt="address-search"></div>
+            <input type="text" id="value" placeholder="지번,도로명,건물명을 입력해주세요." autofocus>
+        </section>
+
+        <section class="addrbox">
+            <div class="item">
+                <ul class="ad1">서울 마포구 신촌로 104 </ul>
+                <ul class="ad2">
+                    <li class="square">지번</li>
+                    <li>서울 마포구 노고산동 31-11</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <ul class="ad1">서울 강남구 선릉로 100길 1(삼성동,선릉)</ul>
+                <ul class="ad2">
+                    <li class="square">지번</li>
+                    <li>서울 강남구 삼성동 131</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <ul class="ad1">서울 영등포구 경인로 846(영등포등, 영등포역)</ul>
+                <ul class="ad2">
+                    <li class="square">지번</li>
+                    <li>서울 영등포구 영등포동 618-496</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <ul class="ad1">서울 영등포구 도신로29길 28 </ul>
+                <ul class="ad2">
+                    <li class="square">지번</li>
+                    <li>서울 영등포구 영등포동 647-1</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <ul class="ad1">서울 강서구 화곡로 168 </ul>
+                <ul class="ad2">
+                    <li class="square">지번</li>
+                    <li>서울 강서구 화곡동 1089-54</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <ul class="ad1">경기 파주시 책향기로 441(동패동,책향기로8)</ul>
+                <ul class="ad2">
+                    <li class="square">지번</li>
+                    <li>경기 파주시 동패동 1698</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <ul class="ad1">서울 종로구 수표로 96 </ul>
+                <ul class="ad2">
+                    <li class="square">지번</li>
+                    <li>서울 종로구 관수동 20</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <ul class="ad1">서울 서대문구 독립문로8길 34 </ul>
+                <ul class="ad2">
+                    <li class="square">지번</li>
+                    <li>서울 서대문구 천연동 95</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <div class="page2">
+        <header>
+            <div class="back"><img src="img/addr_back.png" alt=""></div>
+            <h2>배송 여부</h2>
+            <div><a href="mobile.html"><img src="img/addr_close.png" alt="address-search"></a></div>
+        </header>
+
+        <section class="addrbox">
+            <h2>선택하신 주소는<br><span>오늘회 배송가능</span>지역입니다.</h2>
+
+            <div class="item">
+                <ul class="ad1">서울 마포구 신촌로 104 </ul>
+                <ul class="ad2">
+                    <li class="square">지번</li>
+                    <li>서울 마포구 노고산동 31-11</li>
+                </ul>
+            </div>
+
+            <input type="text" id="value" placeholder="상세주소를 입력해주세요.(건물명, 동/호수 등)">
+        </section>
+
+        <div class="save"><a href="mobile.html">저장하기</a></div>
+
+    </div>
+
+
+</body>
+
+</html>

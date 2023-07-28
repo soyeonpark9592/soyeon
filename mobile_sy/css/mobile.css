@@ -1,0 +1,785 @@
+@charset "utf-8";
+
+@font-face {
+        font-family: 'SUITE-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+}
+
+*,
+*::after,
+*::before {
+        box-sizing: border-box;
+}
+
+body {
+        font-family: 'SUITE-Regular';
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+}
+
+body::-webkit-scrollbar{
+        display: none;
+}
+
+body.open {
+        overflow: hidden;
+        display: fixed;
+}
+
+a {
+        text-decoration: none;
+}
+
+/* header */
+
+#head {
+        width: 100%;
+        height: 50px;
+        background: #f47054;
+        left: 0;
+        top: 0;
+        position: fixed;
+        z-index: 1000000;
+
+}
+
+#header {
+        width: 90%;
+        height: 50px;
+        margin: 0 auto;
+        position: relative;
+
+
+}
+
+#header ul {
+        text-align: center;
+        margin: 0 auto;
+        width: 33.33%;
+}
+
+#logo {
+        text-align: center;
+}
+
+#logo img {
+        width: 70px;
+        transform: translateY(-10px);
+        display: inline-block;
+}
+
+
+
+.hamburger {
+        background: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        line-height: 50px;
+        padding: 0;
+        color: #fff;
+        border: 0;
+        font-size: 1.5rem;
+        cursor: pointer;
+        outline: none;
+}
+
+
+
+.tm {
+        width: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        line-height: 60px;
+        display: flex;
+        justify-content: flex-end;
+
+
+
+}
+
+.tm li {
+        height: 60px;
+        margin-left: 5px;
+}
+
+.tm li img {
+        width: 25px;
+        margin-top: 15px;
+}
+
+#section {
+        position: absolute;
+        top: 40px;
+}
+
+section h2 {
+        text-align: left;
+}
+
+.slick-slide {
+        margin: 0 auto;
+        display: inline-block;
+        width: 100%;
+}
+
+.slick-slide img {
+        width: 100%;
+}
+
+#section {
+        margin: 0 auto;
+        position: relative;
+}
+
+#slide {
+        margin: 0 auto;
+}
+
+.slick-prev {
+        font-size: 0;
+        border: none;
+        background: none;
+}
+
+.slick-next {
+        font-size: 0;
+        border: none;
+        background: none;
+}
+
+.slick-dots {
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+}
+
+.slick-dots li {
+        width: 25px;
+        height: 15px;
+        display: inline-block;
+}
+
+.slick-dots>li>button {
+        font-size: 0;
+        color: #fff;
+        width: 10px;
+        height: 12px;
+        border: none;
+        background: #c0c0c0;
+        border-radius: 100%;
+}
+
+.slick-dots>li.slick-active button {
+        background: #f47054;
+}
+
+/* menu */
+
+#menu {
+        background: #f47054;
+        top: 48px;
+        left: 0;
+        z-index: 100000;
+        left: -100%;
+        transition: all 1s;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+
+}
+
+#menu.open {
+        left: 0;
+}
+
+.mm {
+        width: 80%;
+        margin: 10px auto;
+        height: 90%;
+        overflow-y: auto;
+}
+
+.mm::-webkit-scrollbar {
+        display: none;
+}
+
+.mm a {
+        color: #fff;
+        text-decoration: none;
+}
+
+.mm .function>a {
+
+        font-size: 1rem;
+        display: block;
+}
+
+.mm:last-child {
+        border: none;
+}
+
+
+.mm .function {
+        position: relative;
+        border-bottom: 1px solid #fff;
+        padding: 20px 0;
+}
+
+.mm .function img {
+        position: absolute;
+        right: 0;
+}
+
+
+.mm .function img.open {
+        rotate: 180deg;
+}
+
+
+.mm .sub1 {
+        font-size: 0.9rem;
+        margin: 10px 0;
+        display: none;
+
+}
+
+
+.mm .sub1 li {
+        padding: 10px 0;
+}
+
+.mm .sub1 li a {
+        display: block;
+}
+
+
+
+
+
+/* 배너밑 롤링 동그라미 */
+
+.slick-dots {
+        bottom: -20px;
+}
+
+.slick-dots>li>button {
+        width: 10px;
+        height: 12px;
+}
+
+/* 배송지검색 */
+
+#search {
+        margin-top: 50px;
+}
+
+#search .center {
+        margin: 0 auto;
+        width: 90%;
+        background: #eaeaea;
+        padding: 20px 10px;
+        border-radius: 18px;
+        border: 1px solid #919191;
+}
+
+
+#search .sbox {
+        width: 90%;
+        margin: 0 auto;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+
+
+
+}
+
+
+#search .sbox a {
+        color: #676767;
+        font-size: 1rem;
+}
+
+#search .sbox div {
+        text-align: center;
+}
+
+#search .sbox img {
+        width: 60%;
+        transform: translateY(3px);
+}
+
+
+
+
+/* 특가세일 */
+
+section {
+        width: 90%;
+        margin: 70px auto;
+}
+
+section legend {
+        margin: 0 auto;
+        font-size: 1rem;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+}
+
+section legend h2 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-right: 10px;
+        cursor: pointer;
+}
+
+
+section legend p a {
+        font-size: 0.8rem;
+        color: #636363;
+        font-weight: 500;
+}
+
+section legend p a img {
+        width: 20px;
+        rotate: -180deg;
+        transform: translateY(-3px);
+}
+
+section.margintop {
+        margin-top: 40px;
+}
+
+
+/* 특가 sale_contents */
+
+.sale {
+        width: 100%;
+}
+
+.sale .saleimg{
+position: relative;
+}
+
+.sale div img {
+        width: 100%;
+        border-radius: 5px;
+}
+
+.salecontents {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 1rem;
+        color: #101010;
+}
+
+.salecontents ul {
+        margin: 4px 0;
+        margin-top: 0;
+}
+
+.salecontents .sale_one {
+        color: #636363;
+        font-size: 0.9rem;
+}
+
+.salecontents .sale_three {
+        font-weight: 600;
+        font-size: 1.2rem;
+}
+
+.salecontents span:nth-child(1) {
+        color: red;
+}
+
+.salecontents span:nth-child(3) {
+        color: #636363;
+        font-size: 0.85rem;
+        text-decoration: line-through;
+        font-weight: 500;
+
+}
+
+.salecontents .sale_four a {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: #636363;
+}
+
+.salecontents .sale_four li {
+        width: 10%;
+}
+
+.salecontents .sale_four li img {
+        width: 100%;
+}
+
+.salecontents .sale_four .starnum {
+        width: 90%;
+        font-size: 0.8rem;
+        transform: translate(0, -3px);
+}
+
+
+
+/* 추천메뉴 */
+
+.content {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-weight: 500;
+}
+
+.content li a div{position: relative;}
+
+.content li img {
+        width: 95%;
+        border-radius: 5px;
+        margin: 5px;
+}
+
+
+.content li a p {
+        color: #101010;
+        text-align: center;
+        margin: 5px 0;
+        font-size: 1rem;
+        font-weight: 500;
+}
+
+.content li a :nth-child(3) {
+        font-size: 0.8rem;
+        color: #636363;
+}
+
+.content li a :last-child {
+        font-size: 1.1rem;
+        font-weight: 600;
+}
+
+.saleimg .basket, .content .basket {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        background: #101010;
+        opacity: 0.7;
+        border-radius: 100%;
+        position: absolute;
+        bottom: 15px;
+        right: 10px;
+        cursor: pointer;
+}
+
+.saleimg .basket img{
+        width: 22px;
+        transform: translateY(5px);
+}
+
+.content .basket img {
+        width: 20px;
+        transform: translateY(2px);
+}
+
+
+/* 메인화면_동그라미메뉴 */
+
+.main_menu {
+        margin-top: 80px;
+}
+
+.main_menu .grid1,
+.main_menu .grid2 {
+        display: grid;
+        margin: 1rem auto;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 3px;
+        grid-row-gap: 8px;
+}
+
+
+.main_menu span {
+        color: #101010;
+        font-weight: 500;
+        font-size: 0.8rem;
+        transform: translateX(20px);
+}
+
+
+.main_menu img {
+        width: 100%;
+        opacity: 0.9;
+}
+
+.grid1 li,
+.grid2 li {
+        width: 70%;
+        text-align: center;
+        margin: 0 auto;
+}
+
+.grid2 li img {
+        width: 100%;
+}
+
+
+/* salmon 동영상 */
+.salmon {
+        width: 100%;
+        background: #eae8e8;
+        padding: 20px 0;
+}
+
+.salmon section {
+        margin: 0 auto;
+        padding: 0;
+}
+
+
+.vd {
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+
+}
+
+iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+}
+
+
+/* 혼자서 느끼는 여유 */
+
+
+/* 드림마켓 */
+
+
+
+/* blog */
+.last {
+        margin-bottom: 5rem;
+}
+
+
+.last .maintitle_right {
+        transform: translateX(-20px);
+}
+
+.blog ul {
+        margin: 1rem auto;
+        display: grid;
+        grid-template-columns: repeat(autofit, 2, 1fr);
+        grid-template-rows: repeat(autofit, 3, 1fr);
+        grid-column-gap: 3px;
+        grid-row-gap: 8px;
+}
+
+.blog ul li {
+        font-size: 0.7rem;
+        text-align: justify;
+        margin: 0px auto;
+        width: 100%;
+}
+
+.blog ul li:first-child {
+        grid-column: 1/3;
+        grid-row: 1/2;
+}
+
+.blog ul li:nth-child(2) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+}
+
+.blog ul li img {
+        border-radius: 5px;
+}
+
+.blog ul li:nth-child(3) {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        margin: auto 2px;
+        line-height: 1.1rem;
+}
+
+.blog ul li:nth-child(4) {
+        grid-column: 1/2;
+        grid-row: 3/4;
+}
+
+.blog ul li:nth-child(5) {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        margin: auto 2px;
+        line-height: 1rem;
+}
+
+.blog ul li img {
+        width: 100%;
+        vertical-align: bottom;
+        position: relative;
+}
+
+
+.bt1 {
+        font-size: 11px;
+        padding: 0px 4px;
+        border-radius: 5px;
+        background: #c2482d;
+        color: #fff;
+        text-align: center;
+        border: none;
+        outline: none;
+        width: 30%;
+        display: block;
+        line-height: 20px;
+        transform: translateY(10px);
+
+}
+
+
+
+
+
+/* footer */
+footer {
+        width: 100%;
+        background: #333;
+        color: #fff;
+        font-size: 0.7rem;
+        padding: 30px 0;
+
+}
+
+.cs {
+        width: 90%;
+        margin: 0 auto;
+        height: 100%;
+
+
+}
+
+.cs div {
+        width: 90%;
+        margin: 0 auto;
+}
+
+
+.foot1 {
+        margin: auto 0;
+        font-size: 0.6rem;
+}
+
+.foot1 h2,
+.foot1 h3 {
+        margin: 10px 0;
+}
+
+.foot2 {
+        padding: 0 0 10px 0;
+}
+
+.foot2 li a {
+        color: #fff;
+}
+
+.detail li {
+        margin: 10px 0;
+}
+
+
+.rule li {
+        float: left;
+        width: 50%;
+        text-align: left;
+}
+
+.rule a {
+        font-size: 0.7rem;
+        display: inline-block;
+        border-bottom: 1px solid white;
+        margin: 5px 0 5px 0;
+}
+
+.foot3 ul:nth-child(1) {
+        display: flex;
+}
+
+.foot3 ul span {
+        font-size: 0.6rem;
+        border-bottom: 1px solid #fff;
+        margin: 3px 10px 0 10px;
+}
+
+.detail {
+        display: none;
+}
+
+.delay {
+        animation-delay: 0.3s;
+        -webkit-animation-delay: 0.3s;
+}
+
+.animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+}
+
+.fadeInLeft {
+        -webkit-animation-name: fadeInLeft;
+        animation-name: fadeInLeft;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+}
+
+.a1,
+.a2 {
+        visibility: hidden;
+}
+
+.fadeInLeft {
+        visibility: visible;
+}
+
+
+@keyframes fadeInLeft {
+        0% {
+                opacity: 0;
+                -webkit-transform: translateX(-20px);
+                -ms-transform: translateX(-20px);
+                transform: translateX(-20px);
+        }
+
+        100% {
+                opacity: 1;
+                -webkit-transform: translateX(0);
+                -ms-transform: translateX(0);
+                transform: translateX(0);
+        }
+}

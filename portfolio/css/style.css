@@ -1,0 +1,140 @@
+:root {
+  --white: rgb(255, 255, 255);
+
+  --c1: rgb(255, 255, 255);
+  --c2: rgb(31, 10, 173);
+
+  --left-color: var(--c1);
+  --right-color: var(--c2);
+}
+
+
+
+
+.side {
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  place-items: top;
+  position: absolute;
+  width: 100%;
+  text-align: left;
+}
+
+.side .title {
+  font-family: 'Alfa Slab One';
+  font-size: 6vw;
+  font-weight: 200;
+  margin: 0px 4vw;
+  width: 80vw;
+}
+
+
+.side .title .high{
+  font-size: 8vw;
+  display: inline-block;
+  
+}
+
+.side .title span {
+  display: inline-block;
+  width: 100%;
+
+}
+
+.side .moto {
+  color: rgb(31, 10, 173);
+  font-size: 1vw;
+  font-weight: 500;
+  font-family: "NanumSquare";
+  transform: translateY(2vw);
+}
+
+
+#left-side {
+  background-color: var(--left-color);
+  width: 60%;
+  z-index: 2;
+
+}
+
+#left-side .fancy {
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(31, 10, 173);
+}
+
+#left-side .high {
+  color: var(--right-color);
+  -webkit-text-stroke:0px;
+
+}
+
+#left-side .circle{
+  width: 800px;
+  height: 800px;
+  border: 1px solid rgb(31, 10, 173);
+  background: none;
+  border-radius: 100%;
+  position: absolute;
+  top: -140px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#left-side .circle ul{
+  color: rgb(31, 10, 173);
+  text-align: center;
+  font-family: 'NanumSquare';
+  font-weight: 700;
+  font-size: 1.4vw;
+}
+
+
+
+#right-side .circle{
+  width: 800px;
+  height: 800px;
+  border: 1px solid #fff;
+  background: none;
+  border-radius: 100%;
+  position: absolute;
+  top: -140px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#right-side .circle ul{
+  color: #fff;
+  text-align: center;
+  font-family: 'NanumSquare';
+  font-weight: 700;
+  font-size: 1.4vw;
+}
+/* right */
+#right-side {
+  background-color: var(--right-color);
+}
+
+
+#right-side .moto{
+  -webkit-text-stroke: 0;
+  color: #fff;
+}
+
+#right-side .fancy {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+
+#right-side .high {
+  color: white;
+  -webkit-text-stroke:0;
+}

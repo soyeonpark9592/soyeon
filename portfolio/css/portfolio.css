@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+*:after {
+  box-sizing: border-box;
+}
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+body .container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1200px;
+}
+body .container .flip-btn {
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  color: white;
+  transform-style: preserve-3d;
+  line-height: 100px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+body .container .flip-btn:hover {
+  transform: rotateX(90deg);
+}
+body .container .flip-btn .front {
+  background-color: black;
+  height: 100px;
+  transform: translateZ(50px);
+}
+body .container .flip-btn .back {
+  background-color: #333;
+  height: 100px;
+  transform: rotateX(90deg) translateZ(150px);
+}
+body .container .flip-btn .three {
+  background-color: blue;
+  height: 100px;
+  transform: rotateX(-90deg) translateZ(-150px);
+}
+body .container .flip-btn .four {
+  background-color: green;
+  height: 100px;
+  transform: translateZ(-50px) translateY(-300px) rotateX(180deg);
+}
